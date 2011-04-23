@@ -2,7 +2,7 @@
 "
 " Name:        southernlights256.vim
 " Maintainer:  Jakson Aquino
-" Last Change: Sun Oct 24, 2010  10:36AM
+" Last Change: Fri Apr 22, 2011  11:02AM
 " License:     GNU/GPL
 "
 " Based on other color schemes. The starting point was 'torte'
@@ -17,6 +17,23 @@ endif
 
 let colors_name = "southernlights"
 
+if &term =~ "xterm" || &term =~ "256"
+    let &t_Co = 256
+endif
+
+if $DISPLAY == "" && &t_Co < 256
+    hi String cterm=none ctermfg=white
+    hi Boolean cterm=none ctermfg=red
+    hi Special cterm=none ctermfg=darkyellow
+    hi Number cterm=none ctermfg=magenta
+    hi Comment cterm=none ctermfg=darkcyan
+    hi Function cterm=none ctermfg=cyan
+    hi PreProc cterm=none ctermfg=lightblue
+    hi Type cterm=none ctermfg=lightgreen
+    hi Character cterm=none
+    finish
+endif
+
 hi Boolean	ctermfg=209	guifg=#ff875f
 hi Character	ctermfg=223	guifg=#ffd7af
 hi Comment      ctermfg=147	guifg=#afafff
@@ -25,7 +42,9 @@ hi Conceal	ctermfg=221	ctermbg=black guifg=#ffd75f guibg=black
 hi Cursor	ctermfg=Black	ctermbg=Green	cterm=bold	guifg=Black	guibg=Green	gui=bold
 hi CursorLine	ctermbg=234	cterm=NONE	guibg=#1c1c1c gui=none
 hi CursorColumn	ctermbg=234	cterm=NONE	guibg=#1c1c1c gui=none
+hi ColorColumn	ctermbg=234	cterm=NONE	guibg=#1c1c1c gui=none
 hi Directory	ctermfg=27	guifg=#005fff
+hi Folded	ctermfg=14	ctermbg=240	guifg=#00ffff	guibg=#585858
 hi Function	ctermfg=117	guifg=#87d7ff
 hi Identifier	ctermfg=cyan	guifg=cyan
 hi LineNr	ctermfg=Black	ctermbg=240	guifg=Black	guibg=#585858
@@ -46,11 +65,12 @@ hi SpellBad	ctermfg=red	ctermbg=NONE	cterm=UNDERLINE	guisp=red	gui=undercurl
 hi SpellLocal	ctermfg=Green	ctermbg=NONE	cterm=UNDERLINE	guisp=#00AA00	gui=undercurl
 hi SpellRare	ctermfg=Magenta	ctermbg=NONE	cterm=UNDERLINE	guisp=Magenta	gui=undercurl
 hi Statement	ctermfg=yellow	guifg=yellow	cterm=NONE	gui=NONE
-hi StatusLine	ctermfg=239	ctermbg=white	guifg=#4e4e4e	guibg=white
-hi StatusLineNC	ctermfg=239	ctermbg=black	guifg=gray30	guibg=black
-hi TabLineSel	ctermfg=white	ctermbg=239	guifg=#4e4e4e	guibg=white
-hi TabLine     	ctermfg=247	ctermbg=234	cterm=NONE	guifg=#9e9e9e	guibg=#262626 gui=NONE
-hi VertSplit   	ctermfg=239	ctermbg=black	guifg=gray30	guibg=black
+hi StatusLine	ctermfg=white	ctermbg=239	guifg=white	guibg=#4e4e4e gui=none cterm=bold
+hi StatusLineNC	ctermfg=black	ctermbg=239	guifg=black	guibg=#4e4e4e gui=none cterm=none
+hi VertSplit   	ctermfg=black	ctermbg=239	guifg=black	guibg=gray30 gui=none cterm=none
+hi TabLineSel	ctermfg=black	ctermbg=244	cterm=NONE	guifg=black	guibg=#808080 gui=NONE
+hi TabLine     	ctermfg=black	ctermbg=240	cterm=NONE	guifg=black	guibg=#585858 gui=NONE
+hi TabLineFill  ctermfg=black	ctermbg=235	cterm=NONE	guifg=black	guibg=#262626 gui=NONE
 hi String	ctermfg=229	guifg=#ffffaf 
 hi Title	cterm=bold	ctermfg=Magenta	gui=bold	guifg=Magenta
 hi Type		ctermfg=77	guifg=#5fd75f	gui=NONE
