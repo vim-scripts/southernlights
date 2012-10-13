@@ -1,5 +1,6 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=3292
 
 A 256 colors scheme with identical colors in both Vim and GVim.
+Note: The colors are identical only if the terminal was set to use XTerm color scheme.
 
-screenshots: http://sites.google.com/site/jalvesaq/vimrplugin
+screenshots: http://www.lepem.ufc.br/jaa/vim-r-plugin.html
