@@ -2,14 +2,15 @@
 "
 " Name:        southernlights256.vim
 " Maintainer:  Jakson Aquino
-" Last Change: Sat Sep 22, 2012  02:42PM
+" Last Change: Sun Mar 24, 2013  11:48AM
 " License:     GNU/GPL
 "
 " Based on other color schemes. The starting point was 'torte'
 
-set background=dark
 
 hi clear
+
+set background=dark
 
 if exists("syntax_on")
   syntax reset
@@ -46,7 +47,7 @@ hi CursorLine	ctermbg=234	cterm=NONE	guibg=#1c1c1c gui=none
 hi CursorColumn	ctermbg=234	cterm=NONE	guibg=#1c1c1c gui=none
 hi ColorColumn	ctermbg=234	cterm=NONE	guibg=#1c1c1c gui=none
 hi Error	ctermfg=231	cterm=NONE	ctermbg=196   gui=NONE guifg=White guibg=Red
-hi Directory	ctermfg=27	guifg=#005fff
+hi Directory	ctermfg=33	guifg=#0087ff
 hi Folded	ctermfg=86	ctermbg=240	guifg=#00ffff	guibg=#585858
 hi Function	ctermfg=117	guifg=#87d7ff
 hi Identifier	ctermfg=86	cterm=none      guifg=cyan      gui=none
@@ -54,20 +55,20 @@ hi LineNr	ctermfg=16	ctermbg=240	guifg=Black	guibg=#585858
 hi MatchParen	ctermfg=231	ctermbg=58	guifg=white	guibg=#5f5f00
 hi NonText	ctermfg=21	guifg=#0000ff
 hi Number	ctermfg=223	guifg=#ffd7af
-hi Normal	ctermfg=253	ctermbg=Black	guifg=#dadada guibg=Black
+hi Normal	ctermfg=253	ctermbg=NONE	guifg=#dadada guibg=Black
 hi Operator	ctermfg=204	guifg=#ff5f87
 hi Pmenu	ctermfg=119	ctermbg=22	guifg=#87ff5f	guibg=#005f00
 hi PmenuSel	ctermfg=226	ctermbg=28	guifg=Yellow	guibg=#008700
 hi PmenuSbar    ctermbg=244      guibg=#808080
 hi PmenuThumb   ctermbg=251      guibg=#c6c6c6
-hi PreProc	ctermfg=201	ctermbg=Black	guifg=#ff40ff
+hi PreProc	ctermfg=201	ctermbg=NONE	guifg=#ff40ff
 hi Search	ctermfg=231	ctermbg=58	guifg=white	guibg=#5f5f00
 hi ShowMarksHLl	ctermfg=227	ctermbg=28	guifg=#ffff5f	guibg=#008700
 hi Special	ctermfg=221	guifg=#ffd75f
 hi SpecialKey	ctermfg=86	guifg=#00ffff
 hi SpellBad	ctermfg=196	ctermbg=NONE	cterm=UNDERLINE	guisp=red	gui=undercurl
 hi SpellLocal	ctermfg=28	ctermbg=NONE	cterm=UNDERLINE	guisp=#00AA00	gui=undercurl
-hi SpellRare	ctermfg=221	ctermbg=NONE	cterm=UNDERLINE	guisp=Magenta	gui=undercurl
+hi SpellRare	ctermfg=201	ctermbg=NONE	cterm=UNDERLINE	guisp=Magenta	gui=undercurl
 hi Statement	ctermfg=226	guifg=yellow	cterm=NONE	gui=NONE
 hi StatusLine	ctermfg=231	ctermbg=239	guifg=white	guibg=#4e4e4e gui=none cterm=bold
 hi StatusLineNC	ctermfg=16	ctermbg=239	guifg=black	guibg=#4e4e4e gui=none cterm=none
