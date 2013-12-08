@@ -2,7 +2,7 @@
 "
 " Name:        southernlights256.vim
 " Maintainer:  Jakson Aquino
-" Last Change: Sun Mar 24, 2013  11:48AM
+" Last Change: Sun Dec 08, 2013  01:44PM
 " License:     GNU/GPL
 "
 " Based on other color schemes. The starting point was 'torte'
@@ -22,7 +22,7 @@ if &term =~ "xterm" || &term =~ "256" || $DISPLAY != ""
     set t_Co=256
 endif
 
-if &t_Co < 256
+if &t_Co < 256 && !has("gui_running")
     hi String cterm=none ctermfg=white
     hi Boolean cterm=none ctermfg=red
     hi Special cterm=none ctermfg=darkyellow
@@ -52,6 +52,7 @@ hi Folded	ctermfg=86	ctermbg=240	guifg=#00ffff	guibg=#585858
 hi Function	ctermfg=117	guifg=#87d7ff
 hi Identifier	ctermfg=86	cterm=none      guifg=cyan      gui=none
 hi LineNr	ctermfg=16	ctermbg=240	guifg=Black	guibg=#585858
+hi CursorLineNr	ctermfg=16	ctermbg=243	guifg=Black	guibg=#585858
 hi MatchParen	ctermfg=231	ctermbg=58	guifg=white	guibg=#5f5f00
 hi NonText	ctermfg=21	guifg=#0000ff
 hi Number	ctermfg=223	guifg=#ffd7af
