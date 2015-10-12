@@ -4,3 +4,4 @@ A 256 colors scheme with identical colors in both Vim and GVim.
 Note: The colors are identical only if the terminal was set to use XTerm color scheme.
 
 screenshots: http://www.lepem.ufc.br/jaa/vim-r-plugin.html
+development: https://github.com/jalvesaq/southernlights
